@@ -85,3 +85,6 @@ alias "cear"="clear";
 alias "clr"="clear";
 alias "clearclear"="clear";
 alias "clear"="clear; ls; echo;";
+
+# Validate Apache files
+alias "validateApache"="httpd -t";

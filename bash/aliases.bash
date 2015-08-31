@@ -1,28 +1,87 @@
-# for colors
-export CLICOLOR=1
-export LSCOLORS=ExFxCxDxBxegedabagacad
-
-# grep colors
-export GREP_OPTIONS='--color=auto'
-
-# alias for listing
-alias ll='ls -lah'
-alias la='ls -a'
-alias l='ls -lh'
-
-# alias for disk tools
-alias du='du -h'
-
-# alias for copy move and remove
-alias cp='cp -v'
-alias mv='mv -v'
-alias rm='rm -v'
-
 # reload bash stuff
 alias reload='. ~/.bash_profile'
 
 # make me a password
 alias genpasswd='echo `env LC_CTYPE=C tr -dc "a-zA-Z0-9-_\$\?" < /dev/urandom | head -c 10`'
 
-# copy the public key
-alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
+# switch to hub
+alias "git"="hub";
+
+# typos
+alias "subversion"="svn";
+alias "snv"="svn";
+alias "sl"="ls";
+
+# ignore binary files when grepping.
+alias "grep"="grep -I";
+
+# mkdir should be recursive
+alias "mkdir"="mkdir -p";
+
+# gzip-based programs should not start with "z"
+alias "gzcat"="zcat";
+alias "gzmore"="zmore";
+alias "gzless"="gzmore";
+alias "gzgrep"="zgrep";
+alias "gzfgrep"="zfgrep";
+alias "gzegrep"="zegrep";
+alias "gzdiff"="zdiff";
+alias "gzcmp"="zcmp";
+
+# PHP needs an REPL, but when enabled it can't operate normally.
+# Work around by defining iphp ("interactive" PHP)
+alias "iphp"="php -a";
+
+# safety
+alias "rm"="rm -i";
+alias "cp"="cp -i -R";
+alias "mv"="mv -i";
+
+# I use sed -i far more often than plain sed, but the behaviours are different enough to cause problems
+alias "ised"="sed -i";
+
+# clear
+alias "clara"="clear";
+alias "cclear"="clear";
+alias "coear"="clear";
+alias "cewar"="clear";
+alias "ceer"="clear";
+alias "cls"="clear";
+alias "cleaer"="clear";
+alias "claeer"="clear";
+alias "cle"="clear";
+alias "claer"="clear";
+alias "clar"="clear";
+alias "caer"="clear";
+alias "ear"="clear";
+alias "lear"="clear";
+alias "clera"="clear";
+alias "clwar"="clear";
+alias "clqar"="clear";
+alias "cjear"="clear";
+alias "cleer"="clear";
+alias "cleear"="clear";
+alias "laer"="clear";
+alias "clare"="clear";
+alias "cleare"="clear";
+alias "cler"="clear";
+alias "ceaer"="clear";
+alias "clea"="clear";
+alias "celar"="clear";
+alias "clra"="clear";
+alias "car"="clear";
+alias "cer"="clear";
+alias "clrae"="clear";
+alias "cera"="clear";
+alias "ckear"="clear";
+alias "ckera"="clear";
+alias "cearl"="clear";
+alias "clere"="clear";
+alias "cleera"="clear";
+alias "lcear"="clear";
+alias "lcare"="clear";
+alias "caerd"="clear";
+alias "cear"="clear";
+alias "clr"="clear";
+alias "clearclear"="clear";
+alias "clear"="clear; ls; echo;";

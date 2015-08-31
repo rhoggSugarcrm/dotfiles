@@ -1,11 +1,11 @@
 
-type -P vi &>/dev/null && export EDITOR='vi'
-type -P vim &>/dev/null && export EDITOR='vim'
-type -P subl &>/dev/null && export EDITOR='subl -w'
-type -P atom &>/dev/null && export EDITOR='atom --wait'
+# set up editors
+export EDITOR="emacs";
+export VISUAL="emacs";
+export GIT_EDITOR="emacs";
 
 # your projects folder
-export PROJECTS=~/Code
+export PROJECTS=~/src
 
 # history like it should always be (no duplicate entries)
 export HISTCONTROL=ignoredups:erasedups

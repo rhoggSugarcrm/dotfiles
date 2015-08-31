@@ -1,0 +1,125 @@
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(column-number-mode t)
+ '(cua-mode t nil (cua-base))
+ '(custom-enabled-themes (quote (tango-dark)))
+ '(delete-selection-mode t)
+ '(fringe-mode (quote (nil . 0)) nil (fringe))
+ '(indent-tabs-mode nil)
+ '(inhibit-startup-screen t)
+ '(initial-major-mode (quote text-mode))
+;; '(js-enabled-frameworks (quote (javascript prototype)))
+ '(mark-even-if-inactive t)
+ '(nxml-child-indent 4)
+ '(nxml-outline-child-indent 4)
+;; '(php-mode-coding-style (quote symfony2))
+ '(recentf-mode t)
+ '(scroll-bar-mode (quote right))
+ '(send-mail-function (quote smtpmail-send-it))
+ '(sgml-basic-offset 4)
+ '(shift-select-mode nil)
+ '(show-paren-mode t)
+ '(vc-follow-symlinks t))
+
+(set-keyboard-coding-system nil)
+
+;(require 'php-mode)
+
+;(linum-mode)
+;(global-linum-mode 1)
+
+(global-set-key "\C-s" 'save-buffer)
+(global-set-key "\C-q" 'save-buffers-kill-terminal)
+(global-set-key "\C-o" 'find-file)
+(global-set-key "\C-l" 'goto-line)
+(global-set-key "\C-f" 'isearch-forward-regexp)
+(define-key isearch-mode-map (kbd "RET") 'isearch-repeat-forward)
+(define-key isearch-mode-map (kbd "S-RET") 'isearch-repeat-backward)
+(define-key vc-prefix-map "d" 'vc-root-diff)
+(define-key vc-prefix-map "D" 'vc-dir)
+(global-set-key "\C-r" 'replace-regexp)
+(global-set-key "\C-a" 'mark-whole-buffer)
+(global-unset-key "\C-y")
+
+(setq-default major-mode 'text-mode)
+(auto-compression-mode 1)
+(setq inhibit-splash-screen t)
+
+(setq make-backup-files nil)
+(set-default 'truncate-lines t)
+
+;; javascript lint
+(defun jslint-this-file ()
+  (interactive)
+  (compile (format "gjslint %s" (buffer-file-name))))
+
+(add-hook 'js-mode-hook
+          '(lambda ()
+             (local-set-key (kbd "C-c C-l") 'jslint-this-file)))
+
+;; Text mode
+(add-hook 'text-mode-hook
+          '(lambda ()
+             (local-set-key "\C-c\C-s" 'ispell)
+             (local-set-key "\C-c\C-w" 'count-words)))
+
+;; HTML mode
+(add-hook 'html-mode-hook
+          '(lambda ()
+             (local-set-key "\C-c\C-w" 'browse-url-of-file)))
+
+(delete-selection-mode)
+
+; don't split window when opening an interactive SQL session
+(add-to-list 'same-window-buffer-names "*SQL*")
+
+; markdown files
+(autoload 'markdown-mode "markdown-mode"
+   "Major mode for editing Markdown files" t)
+(add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+
+; Shell
+(eval-after-load 'shell
+  '(progn
+     (define-key shell-mode-map [up] 'comint-previous-input)
+     (define-key shell-mode-map [down] 'comint-next-input)))
+
+; Disable menu bar except for GUI emacs
+(if (not window-system)
+    (add-hook 'term-setup-hook #'(lambda () (menu-bar-mode -1))))
+
+; Emacs LISP
+(defun elint-this-file ()
+  (interactive)
+  (elint-file (buffer-file-name)))
+
+(defun reload-home ()
+  (interactive)
+  (load-file "~/.emacs"))
+
+(add-hook 'emacs-lisp-mode-hook
+          '(lambda ()
+             (local-set-key (kbd "C-c C-l") 'elint-this-file)
+             (local-set-key (kbd "C-c C-r") 'reload-home)))
+
+; Git
+(add-to-list 'auto-mode-alist '(".gitconfig" . conf-unix-mode))
+(add-hook 'log-edit-mode-hook
+          '(lambda ()
+             (local-set-key "\C-s" 'log-edit-done)))
+
+(defun git-do (cmd)
+  (compile (format "git %s" cmd)))
+
+(defun git-init ()
+  (interactive)
+  (git-do "init"))
+
+(defun git-push ()
+  (interactive)
+  (git-do "push"))

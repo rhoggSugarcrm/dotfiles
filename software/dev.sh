@@ -12,3 +12,6 @@ open http://www.sourcetreeapp.com
 open https://www.google.com/intl/en/chrome/browser/
 open https://www.google.com/intl/en/chrome/browser/canary.html
 open http://www.mozilla.org/en-US/firefox
+
+# Documentation browser
+open https://marketplace.firefox.com/app/devdocs/

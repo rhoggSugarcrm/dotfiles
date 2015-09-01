@@ -1,7 +1,5 @@
 # Sets reasonable OS X defaults.
 #
-# Or, in other words, set shit how I like in OS X.
-#
 # The original idea (and a couple settings) were grabbed from:
 #   https://github.com/mathiasbynens/dotfiles/blob/master/.osx
 #
@@ -18,9 +16,8 @@
 # Menu bar: show TextInput, Displays, User, etc.
 defaults write com.apple.systemuiserver menuExtras -array "/System/Library/CoreServices/Menu Extras/Displays.menu" "/System/Library/CoreServices/Menu Extras/TimeMachine.menu" "/System/Library/CoreServices/Menu Extras/Bluetooth.menu" "/System/Library/CoreServices/Menu Extras/AirPort.menu" "/System/Library/CoreServices/Menu Extras/Volume.menu" "/System/Library/CoreServices/Menu Extras/TextInput.menu" "/System/Library/CoreServices/Menu Extras/Battery.menu" "/System/Library/CoreServices/Menu Extras/Clock.menu" "/System/Library/CoreServices/Menu Extras/User.menu"
 
-
 # Set the clock settings (System Preferences → Date & Time → Clock)
-defaults write com.apple.menuextra.clock DateFormat -string "EEE H:mm:ss"
+defaults write com.apple.menuextra.clock DateFormat -string "EEE, MMM d I:mm a"
 defaults write com.apple.menuextra.clock FlashDateSeparators -bool false
 defaults write com.apple.menuextra.clock IsAnalog -bool false
 
@@ -54,12 +51,10 @@ defaults write NSGlobalDomain KeyRepeat -int 5
 #defaults write NSGlobalDomain InitialKeyRepeat -int 20
 
 # Set language and text formats (System Preferences → Language & Text)
-# Note: if you’re in the US, replace `EUR` with `USD`, `Centimeters` with
-# `Inches`, and `true` with `false`.
-defaults write NSGlobalDomain AppleLanguages -array "en" "pt_PT" "pt"
-#defaults write NSGlobalDomain AppleLocale -string "pt_PT@currency=EUR"
-#defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
-#defaults write NSGlobalDomain AppleMetricUnits -bool true
+defaults write NSGlobalDomain AppleLanguages -array "en_CA" "en";
+defaults write NSGlobalDomain AppleLocale -string "en_US@currency=USD"
+defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
+defaults write NSGlobalDomain AppleMetricUnits -bool true
 
 # Set system time to HH:mm (24h format)
 /usr/libexec/PlistBuddy -c 'Add :AppleICUTimeFormatStrings dict' ~/Library/Preferences/.GlobalPreferences.plist
@@ -72,16 +67,11 @@ defaults write NSGlobalDomain AppleLanguages -array "en" "pt_PT" "pt"
 # Dock
 ##
 
-# Minimize on double click (System Preferences → Dock)
-defaults write NSGlobalDomain AppleMiniaturizeOnDoubleClick -bool true
-
 # Minimize to application (System Preferences → Dock)
-defaults write com.apple.dock minimize-to-application -bool true
+defaults write com.apple.dock minimize-to-application -bool true;
 
 # Magnification and sizes
 defaults write com.apple.dock magnification -bool true
-defaults write com.apple.dock tilesize -int 45
-defaults write com.apple.dock largesize -int 75
 
 ##
 # Finder
@@ -116,9 +106,8 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
 /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:arrangeBy name" ~/Library/Preferences/com.apple.finder.plist
 
-# Use list view in all Finder windows by default
-# Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
-defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
+# Use icon view in all Finder windows by default
+defaults write com.apple.finder FXPreferredViewStyle -string "icnv"
 
 # Empty Trash securely by default
 defaults write com.apple.finder EmptyTrashSecurely -bool true
@@ -163,20 +152,12 @@ defaults write com.apple.iCal "Show time in Month View" -bool true
 # show week numbers by default
 defaults write com.apple.iCal "Show Week Numbers" -bool true
 
-# birthdays on
-defaults write com.apple.iCal "display birthdays calendar" -bool true
+# birthdays off
+defaults write com.apple.iCal "display birthdays calendar" -bool false;
 
 # default calendar change (change this to your calendar id)
 defaults write com.apple.iCal "CalDefaultCalendarSelectedByUser" -bool true
 defaults write com.apple.iCal "CalDefaultCalendar" -string "5E11650F-1FBB-4725-84F7-7A5A5A485735"
-
-##
-# iChat
-##
-
-# make it more silent on buddy in/out
-#/usr/libexec/PlistBuddy -c "Set :EventActions:BuddyAvailable:PlaySound false" ~/Library/Preferences/com.apple.iChat.plist
-#/usr/libexec/PlistBuddy -c "Set :EventActions:BuddyUnavailable:PlaySound false" ~/Library/Preferences/com.apple.iChat.plist
 
 ##
 # Safari & WebKit
@@ -191,8 +172,8 @@ defaults write com.apple.Safari AlwaysShowTabBar -bool true
 # Prevent Safari from opening ‘safe’ files automatically after downloading
 defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
 
-# Always restore session after launch on Safari 
-defaults write com.apple.Safari AlwaysRestoreSessionAtLaunch -bool true
+# Don't always restore session after launch on Safari 
+defaults write com.apple.Safari AlwaysRestoreSessionAtLaunch -bool false
 
 # Enable Safari’s debug menu
 defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
@@ -216,40 +197,8 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 defaults write com.apple.terminal StringEncodings -array 4
 
 # Use a modified version of the Pro theme by default in Terminal.app
-open "$DOT/osx/Bond.terminal"
-sleep 1 # Wait a bit to make sure the theme is loaded
-defaults write com.apple.Terminal "Default Window Settings" -string "Bond"
-defaults write com.apple.Terminal "Startup Window Settings" -string "Bond"
-
-# Enable "focus follows mouse" for Terminal.app and all X11 apps
-# i.e. hover over a window and start typing in it without clicking first
-#defaults write com.apple.terminal FocusFollowsMouse -bool true
-#defaults write org.x.X11 wm_ffm -bool true
-
-##
-# Twitter.app
-##
-
-# Disable smart quotes as it’s annoying for code tweets
-defaults write com.twitter.twitter-mac AutomaticQuoteSubstitutionEnabled -bool false
-
-# Show the app window when clicking the menu icon
-defaults write com.twitter.twitter-mac MenuItemBehavior -int 1
-
-# Enable the hidden ‘Develop’ menu
-defaults write com.twitter.twitter-mac ShowDevelopMenu -bool true
-
-# Open links in the background
-defaults write com.twitter.twitter-mac openLinksInBackground -bool true
-
-# Allow closing the ‘new tweet’ window by pressing `Esc`
-defaults write com.twitter.twitter-mac ESCClosesComposeWindow -bool true
-
-# Show full names rather than Twitter handles
-defaults write com.twitter.twitter-mac ShowFullNames -bool true
-
-# Hide the app in the background if it’s not the front-most window
-defaults write com.twitter.twitter-mac HideInBackground -bool true
+defaults write com.apple.Terminal "Default Window Settings" -string "Ocean"
+defaults write com.apple.Terminal "Startup Window Settings" -string "Ocean"
 
 ##
 # GPG tools (Mail)
@@ -277,4 +226,3 @@ done
 
 echo "Done. Note that some of these changes require a logout/restart to take effect."
 
-echo "Terminal has been updated. Please close it and open it again."

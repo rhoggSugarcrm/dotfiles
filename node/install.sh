@@ -8,3 +8,7 @@ then
   inform 'Installing npm for you.'
   curl -L https://npmjs.org/install.sh | sh
 fi
+
+# install some dependencies
+npm install -g uglify-js;
+npm install -g grunt-cli;

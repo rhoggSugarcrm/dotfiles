@@ -33,9 +33,9 @@ alias "gzcmp"="zcmp";
 alias "iphp"="php -a";
 
 # safety
-alias "rm"="rm -i";
-alias "cp"="cp -i -R";
-alias "mv"="mv -i";
+alias "rm"="rm -i -v";
+alias "cp"="cp -i -R -v";
+alias "mv"="mv -i -v";
 
 # I use sed -i far more often than plain sed, but the behaviours are different enough to cause problems
 alias "ised"="sed -i";

@@ -88,3 +88,6 @@ alias "clear"="clear; ls; echo;";
 
 # Validate Apache files
 alias "validateApache"="httpd -t";
+
+# gjslint
+alias gjslint='/usr/local/bin/gjslint --flagfile=~/.gjslint-config';

@@ -29,7 +29,7 @@
 
 [core]
   quotepath = false
-  excludesfile = ~/.gitignore
+	excludesfile = /Users/rhogg/.gitignore_global
 
 [apply]
   whitespace = nowarn

@@ -53,8 +53,8 @@
 (global-set-key "\C-a" 'mark-whole-buffer)
 (global-unset-key "\C-y") ; default paste key
 
-(global-set-key (kbd "M-[ h") 'beginning-of-line)
-(global-set-key (kbd "M-[ f") 'end-of-line) 
+(global-set-key (kbd "<home>") 'beginning-of-line)
+(global-set-key (kbd "<end>") 'end-of-line) 
 
 ;; key bindings
 (when (eq system-type 'darwin) ;; mac specific settings

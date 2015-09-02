@@ -1,0 +1,37 @@
+#!/bin/bash
+
+if [[ "$1" == "--help" ]]; then
+  echo "Usage: $0 [GIT_REV]
+Invoke \$EDITOR on the files modified in the given revision.
+If no revision is given, invoke \$EDITOR on the files modified in git status."
+  exit 1
+fi
+
+# The diff filter is everything except D; we don't want to edit deleted files!
+diff_params="--diff-filter=ACMRTUXB --name-only"
+
+if [[ "$1" == "" ]]; then
+  files=$(git diff $diff_params)
+  if [[ "$files" == "" ]]; then
+    echo "No files modified in current checkout."
+    echo "Did you mean to do |git edit-files REV|?"
+    exit 2
+  fi
+
+  $EDITOR $files
+  exit 0
+fi
+
+if ! echo "$1" | grep -q '\.\.'; then
+  revs="$1^..$1"
+else
+  revs="$1"
+fi
+
+files=$(git diff $diff_params $revs)
+if [[ "$files" == "" ]]; then
+  echo "No files modified in range $revs."
+  exit 2
+fi
+
+$EDITOR $files

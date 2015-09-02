@@ -46,7 +46,7 @@
 (global-set-key "\C-l" 'goto-line)
 (global-set-key "\C-f" 'isearch-forward-regexp)
 (define-key isearch-mode-map (kbd "<return>") 'isearch-repeat-forward)
-(define-key isearch-mode-map (kbd "S-RET") 'isearch-repeat-backward)
+(define-key isearch-mode-map (kbd "<S-return>") 'isearch-repeat-backward)
 (define-key vc-prefix-map "d" 'vc-root-diff)
 (define-key vc-prefix-map "D" 'vc-dir)
 (global-set-key "\C-r" 'replace-regexp)

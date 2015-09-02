@@ -2,7 +2,7 @@
 # set up editors
 export EDITOR="emacs";
 export VISUAL="emacs";
-export GIT_EDITOR="emacs";
+export GIT_EDITOR="/usr/local/bin/emacs"; # has to open in the foreground
 
 # your projects folder
 export PROJECTS=~/src

@@ -20,6 +20,7 @@
   fa = fetch --all --prune --tags
   count = shortlog -sn
   unchange = checkout --
+  uncommit = reset --hard HEAD~1
 
 [color]
   diff = auto

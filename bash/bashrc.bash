@@ -21,6 +21,8 @@ shopt -s histappend
 # Save and reload the history after each command finishes
 #export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
+source $(brew --prefix php-version)/php-version.sh && php-version 5
+
 # load all functions
 if [[ -d $DOT/functions/ ]]
 then

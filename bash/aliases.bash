@@ -115,3 +115,6 @@ alias l='ls -lh'
 
 # alias for disk tools
 alias du='du -h'
+
+# alias for Git
+alias "gp"="git push";

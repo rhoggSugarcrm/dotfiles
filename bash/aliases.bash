@@ -28,10 +28,6 @@ alias "gzegrep"="zegrep";
 alias "gzdiff"="zdiff";
 alias "gzcmp"="zcmp";
 
-# PHP needs an REPL, but when enabled it can't operate normally.
-# Work around by defining iphp ("interactive" PHP)
-alias "iphp"="php -a";
-
 # safety
 alias "rm"="rm -i -v";
 alias "cp"="cp -i -R -v";
@@ -91,9 +87,23 @@ alias "validateApache"="httpd -t";
 
 # gjslint
 alias gjslint='/usr/local/bin/gjslint --flagfile=~/.gjslint-config';
+
 # for colors
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
+
+# ##############################################################################
+
+# PHP aliases
+
+# PHP needs an REPL, but when enabled it can't operate normally.
+# Work around by defining iphp ("interactive" PHP)
+alias "iphp"="php -a";
+
+alias "phpcs"="phpcs --standard=psr2";
+alias "phpcbf"="phpcbf --standard=psr2";
+
+# ##############################################################################
 
 # grep colors
 export GREP_OPTIONS='--color=auto'

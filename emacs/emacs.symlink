@@ -158,6 +158,8 @@
 
 ;; ************************************************
 
+(x-focus-frame nil)
+
 ;; Local Variables:
 ;; mode: emacs-lisp
 ;; End:

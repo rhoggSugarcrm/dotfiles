@@ -1,3 +1,2 @@
 #!/bin/bash
-
-open -a "Emacs" "$@";
+/Applications/Emacs.app/Contents/MacOS/Emacs "$@"

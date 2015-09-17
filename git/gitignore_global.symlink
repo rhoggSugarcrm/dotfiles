@@ -4,3 +4,4 @@
 # IDEs
 .idea
 nbproject
+config_override.php

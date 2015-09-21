@@ -1,54 +1,59 @@
 [user]
-  name = rhoggSugarcrm
-  email = rhogg@sugarcrm.com
+    name = rhoggSugarcrm
+    email = rhogg@sugarcrm.com
 
 [credential]
-  helper = osxkeychain
+    helper = osxkeychain
 
 [alias]
-  co = checkout
-  st = status
-  mergeleader = merge --no-ff --no-commit
-  l = log --oneline --decorate --graph --show-signature
-  la = log --oneline --decorate --graph --all --show-signature
-  lf = log --summary --no-merges --show-signature
-  wtf = !$DOT/bin/git-wtf
-  fixup = !sh -c 'git commit -m \"fixup! $(git log -1 --format='\\''%s'\\'' $@)\"' -
-  squash = !sh -c 'git commit -m \"squash! $(git log -1 --format='\\''%s'\\'' $@)\"' -
-  ri = rebase --interactive --autosquash
-  f = fetch --prune
-  fa = fetch --all --prune --tags
-  count = shortlog -sn
-  unchange = checkout --
-  uncommit = reset --hard HEAD~1
+    co = checkout
+    st = status
+    mergeleader = merge --no-ff --no-commit
+    l = log --oneline --decorate --graph --show-signature
+    la = log --oneline --decorate --graph --all --show-signature
+    lf = log --summary --no-merges --show-signature
+    wtf = !$DOT/bin/git-wtf
+    fixup = !sh -c 'git commit -m \"fixup! $(git log -1 --format='\\''%s'\\'' $@)\"' -
+    squash = !sh -c 'git commit -m \"squash! $(git log -1 --format='\\''%s'\\'' $@)\"' -
+    ri = rebase --interactive --autosquash
+    f = fetch --prune
+    fa = fetch --all --prune --tags
+    count = shortlog -sn
+    unchange = checkout --
+    uncommit = reset --hard HEAD~1
 
 [color]
-  diff = auto
-  status = auto
-  branch = auto
-  ui = true
+    diff = auto
+    status = auto
+    branch = auto
+    ui = true
 
 [core]
-  quotepath = false
-	excludesfile = /Users/rhogg/.gitignore_global
+    quotepath = false
+    excludesfile = /Users/rhogg/.gitignore_global
 
 [apply]
-  whitespace = nowarn
+    whitespace = nowarn
+
+[merge]
+    tool = meld
 
 [mergetool]
-  keepBackup = false
+    keepBackup = false
 
 [difftool]
-  prompt = false
+    prompt = false
 
 [help]
-  autocorrect = 1
+    autocorrect = 1
 
 [push]
-  default = simple
+    default = simple
+
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
+
 [mergetool "sourcetree"]
 	cmd = /opt/homebrew-cask/Caskroom/sourcetree/2.0.5.2/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true

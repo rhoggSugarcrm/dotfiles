@@ -1,31 +1,20 @@
-;; Require Emacs' package functionality
-(require 'package)
-
-;; Add the Melpa repository to the list of package sources
-(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
-
-;; Initialise the package system.
-(package-initialize)
-
 (custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
+  ;; custom-set-variables was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
  '(blink-cursor-mode nil)
- '(c-require-final-newline
-   (quote
-    ((c-mode . t)
-     (c++-mode . t)
-     (objc-mode . t)
-     (java-mode . t))))
+ '(c-basic-offset 4)
+ '(c-require-final-newline (quote ((c-mode . t) (c++-mode . t) (objc-mode . t) (java-mode . t))))
  '(column-number-mode t)
  '(cua-mode t nil (cua-base))
  '(delete-selection-mode t)
  '(fringe-mode (quote (nil . 0)) nil (fringe))
+ '(gud-gdb-command-name "gdb --annotate=1")
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(initial-major-mode (quote text-mode))
+ '(large-file-warning-threshold nil)
  '(mark-even-if-inactive t)
  '(nxml-child-indent 4)
  '(nxml-outline-child-indent 4)
@@ -71,7 +60,6 @@
 (auto-compression-mode 1)
 (setq make-backup-files nil)
 ;(set-default 'truncate-lines t)
-(add-hook 'find-file-hook 'flymake-find-file-hook)
 (delete-selection-mode)
 
 (set-terminal-coding-system 'utf-8)
@@ -84,12 +72,6 @@
 ; Disable menu bar except for GUI emacs
 (if (not window-system)
     (add-hook 'term-setup-hook #'(lambda () (menu-bar-mode -1))))
-
-(require 'tabbar)
-(tabbar-mode)
-
-(linum-mode)
-(global-linum-mode 1)
 
 ;; ************************************************
 
@@ -134,20 +116,10 @@
 
 ;; ************************************************
 
-;; PHP
-(require 'php-mode)
-
-;; ************************************************
-
 ;; Ruby
 (add-to-list 'auto-mode-alist '("\\.rdoc\\'" . ruby-mode))
 
 ;; ************************************************
-
-;; Git
-; Try git-el for now
-(require 'git)
-(require 'git-blame)
 
 (add-to-list 'auto-mode-alist '(".gitconfig" . conf-unix-mode))
 
@@ -158,8 +130,12 @@
 
 ;; ************************************************
 
-(x-focus-frame nil)
-
+(custom-set-faces
+  ;; custom-set-faces was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ )
 ;; Local Variables:
 ;; mode: emacs-lisp
 ;; End:

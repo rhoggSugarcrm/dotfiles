@@ -1,6 +1,3 @@
 
-# local bin
-PATH=/usr/local/bin:/usr/local/sbin:$PATH
-
-# .dotfiles bin
-PATH=$DOT/bin:$PATH
+# PATH
+PATH="$HOME/privateBin:$DOT/bin:/usr/local/bin:/usr/local/sbin:$PATH";

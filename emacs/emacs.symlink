@@ -130,6 +130,13 @@
 
 ;; ************************************************
 
+(let ((default-directory "/usr/local/share/emacs/site-lisp/"))
+    (normal-top-level-add-subdirs-to-load-path))
+(require 'php-mode)
+  (add-to-list 'auto-mode-alist '("\.php$" . php-mode))
+
+;; ************************************************
+
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.

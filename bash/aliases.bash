@@ -118,3 +118,6 @@ alias du='du -h'
 
 # alias for Git
 alias "gp"="git push";
+
+# compatibility with zsh
+alias "rehash"="hash -r";

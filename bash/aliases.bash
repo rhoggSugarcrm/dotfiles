@@ -116,8 +116,9 @@ alias l='ls -lh'
 # alias for disk tools
 alias du='du -h'
 
-# alias for Git
+# aliases for Git
 alias "gp"="git push";
+alias "gc"="git commit";
 
 # compatibility with zsh
 alias "rehash"="hash -r";

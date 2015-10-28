@@ -122,3 +122,9 @@ alias "gc"="git commit";
 
 # compatibility with zsh
 alias "rehash"="hash -r";
+
+################################
+
+# Emacs
+alias "emacs"="emacsclient -nw";
+alias "xemacs"="emacsclient -c";

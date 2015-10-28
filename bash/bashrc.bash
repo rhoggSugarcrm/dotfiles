@@ -1,8 +1,9 @@
 
 # set up editors
-export EDITOR="emacs";
-export VISUAL="emacs";
-export GIT_EDITOR="emacs"; # has to open in the foreground
+export ALTERNATE_EDITOR="";
+export EDITOR="emacsclient -nw";
+export VISUAL="emacsclient";
+export GIT_EDITOR="emacsclient -nw";
 
 # Set up Firefox for Karma
 export FIREFOX_BIN="$HOME/Applications/Firefox.app/Contents/MacOS/firefox-bin";

@@ -137,6 +137,13 @@
 
 ;; ************************************************
 
+(add-hook 'find-file-hook (lambda () (linum-mode 1)))
+
+(require 'markdown-mode)
+(add-to-list 'auto-mode-alist '("\.markdown$" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\.mdown$" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\.md$" . markdown-mode))
+
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.

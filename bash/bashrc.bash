@@ -7,8 +7,7 @@ export GIT_EDITOR="emacsclient -nw";
 
 # Set up Firefox for Karma
 export FIREFOX_BIN="$HOME/Applications/Firefox.app/Contents/MacOS/firefox-bin";
-
-export BROWSER="$FIREFOX_BIN";
+#export BROWSER="$FIREFOX_BIN"; # incompatible with hub browse
 
 # your projects folder
 export PROJECTS=~/src

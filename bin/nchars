@@ -1,0 +1,20 @@
+#!/usr/bin/env node
+
+var process = require("process");
+
+if(process.argv.length != 4)
+{
+    console.log("Usage: " + process.argv[0] + " <n> <char>");
+    process.exit(1);
+}
+
+var str = "";
+for(var i = 0; i < parseInt(process.argv[2], 10); i++)
+{
+    str += process.argv[3];
+}
+console.log(str);
+
+// Local Variables:
+// mode: js
+// End:

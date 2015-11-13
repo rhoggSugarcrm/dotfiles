@@ -144,6 +144,8 @@
 (add-to-list 'auto-mode-alist '("\.mdown$" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\.md$" . markdown-mode))
 
+(require 'editorconfig)
+
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.

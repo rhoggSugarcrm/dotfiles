@@ -1,6 +1,6 @@
 #!/bin/bash
 
 # Script that runs various things I need when I restart my machine
-mysql.server start;
+#mysql.server start;
 elasticsearch -d;
 

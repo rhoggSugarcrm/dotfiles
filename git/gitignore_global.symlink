@@ -5,3 +5,4 @@
 .idea
 nbproject
 config_override.php
+npm-debug.log

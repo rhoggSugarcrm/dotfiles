@@ -20,6 +20,7 @@ brew 'curl'
 brew 'dark-mode'
 brew 'dos2unix'
 brew 'editorconfig'
+brew 'flycheck'
 brew 'emacs', args: ['with-cocoa']
 brew 'flex'
 brew 'gist'

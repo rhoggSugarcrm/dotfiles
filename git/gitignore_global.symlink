@@ -6,3 +6,4 @@
 nbproject
 config_override.php
 npm-debug.log
+.git-vcr.ini

@@ -14,3 +14,5 @@ npm install -g uglify-js;
 npm install -g grunt-cli;
 npm install -g jsonlint;
 npm install -g gulp-cli;
+npm install -g jscs;
+npm install -g trash-cli;

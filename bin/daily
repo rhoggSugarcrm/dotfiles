@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Script that runs various things I need when I restart my machine
-#mysql.server start;
+sudo apachectl restart;
+#mysql.server restart;
 elasticsearch -d;
 

@@ -119,6 +119,7 @@ alias du='du -h'
 # aliases for Git
 alias "gp"="git push";
 alias "gc"="git commit";
+alias "gs="git status -sb";
 
 # compatibility with zsh
 alias "rehash"="hash -r";

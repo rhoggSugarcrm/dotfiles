@@ -129,3 +129,8 @@ alias "rehash"="hash -r";
 # Emacs
 alias "emacs"="emacsclient -nw";
 alias "xemacs"="emacsclient -c";
+
+###############################
+
+# Networks (OS X)
+alias "getPorts"="sudo lsof -i -P | grep -i listen";

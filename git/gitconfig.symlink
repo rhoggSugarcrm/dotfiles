@@ -31,6 +31,7 @@
 [core]
     quotepath = false
     excludesfile = /Users/rhogg/.gitignore_global
+	pager = diff-so-fancy | less --tabs=4 -RFX
 
 [apply]
     whitespace = nowarn

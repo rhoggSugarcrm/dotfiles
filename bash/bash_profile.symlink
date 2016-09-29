@@ -11,3 +11,5 @@ done
 for comp_file in $(find $DOT -name *.completion -type f); do
   source $comp_file;
 done
+
+export EDITOR="mate -w";

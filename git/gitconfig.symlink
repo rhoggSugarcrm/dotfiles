@@ -37,7 +37,7 @@
     whitespace = nowarn
 
 [merge]
-    tool = meld
+    tool = emerge
 
 [mergetool]
     keepBackup = false

@@ -10,7 +10,7 @@
  '(cua-mode t nil (cua-base))
  '(custom-enabled-themes (quote (tango-dark)))
  '(delete-selection-mode t)
- '(flycheck-disabled-checkers (quote (emacs-lisp-checkdoc javascript-eslint javascript-standard ruby-rubylint sh-posix-dash tex-lacheck)))
+ '(flycheck-disabled-checkers (quote (emacs-lisp-checkdoc javascript-standard ruby-rubylint sh-posix-dash tex-lacheck)))
  '(fringe-mode (quote (nil . 0)) nil (fringe))
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)

@@ -13,3 +13,5 @@ for comp_file in $(find $DOT -name *.completion -type f); do
 done
 
 export EDITOR="mate -w";
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"

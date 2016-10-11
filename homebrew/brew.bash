@@ -2,6 +2,7 @@ type -P brew &>/dev/null || return
 
 export HOMEBREW_NO_AUTO_UPDATE=1;
 export HOMEBREW_DEVELOPER=1;
+export HOMEBREW_NO_ANALYTICS=1;
 
 # Sources a file
 # Accepts 1 param which is the file we want include

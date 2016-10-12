@@ -127,8 +127,8 @@ alias "rehash"="hash -r";
 ################################
 
 # Emacs
-alias "emacs"="emacsclient -nw";
-alias "xemacs"="emacsclient -c";
+alias "emacs"="emacs -nw";
+alias "xemacs"="aquamacs";
 
 ###############################
 

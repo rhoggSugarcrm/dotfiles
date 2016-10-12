@@ -8,7 +8,6 @@
  '(c-require-final-newline (quote ((c-mode . t) (c++-mode . t) (objc-mode . t) (java-mode . t))))
  '(column-number-mode t)
  '(cua-mode t nil (cua-base))
- '(custom-enabled-themes (quote (tango-dark)))
  '(delete-selection-mode t)
  '(flycheck-disabled-checkers (quote (emacs-lisp-checkdoc javascript-standard ruby-rubylint sh-posix-dash tex-lacheck)))
  '(fringe-mode (quote (nil . 0)) nil (fringe))
@@ -27,6 +26,22 @@
  '(show-paren-mode t)
  '(tool-bar-mode nil)
  '(vc-follow-symlinks t))
+
+(add-to-list 'load-path "/usr/local/share/emacs/site-lisp")
+(load-library "/usr/local/share/emacs/site-lisp/autoconf/autoconf-mode.elc")
+(load-library "/usr/local/share/emacs/site-lisp/dash-emacs/dash.elc")
+(load-library "/usr/local/share/emacs/site-lisp/editorconfig-emacs/editorconfig-conf-mode.el")
+(load-library "/usr/local/share/emacs/site-lisp/editorconfig-emacs/editorconfig-fnmatch.elc")
+(load-library "/usr/local/share/emacs/site-lisp/editorconfig-emacs/editorconfig-core-handle.elc")
+(load-library "/usr/local/share/emacs/site-lisp/editorconfig-emacs/editorconfig-core.elc")
+(load-library "/usr/local/share/emacs/site-lisp/editorconfig-emacs/editorconfig.elc")
+(load-library "/usr/local/share/emacs/site-lisp/git/git.el")
+(load-library "/usr/local/share/emacs/site-lisp/git/git-blame.el")
+(load-library "/usr/local/share/emacs/site-lisp/git/git.el")
+(load-library "/usr/local/share/emacs/site-lisp/js2-mode/js2-mode.elc")
+(load-library "/usr/local/share/emacs/site-lisp/markdown-mode/markdown-mode.elc")
+(load-library "/usr/local/share/emacs/site-lisp/php-mode/php-mode.elc")
+(load-library "/usr/local/share/emacs/site-lisp/web-mode/web-mode.elc")
 
 ;; Key Bindings
 (global-set-key "\C-s" 'save-buffer)
@@ -51,7 +66,7 @@
   (setq mac-option-modifier 'alt)
   (setq mac-command-modifier 'meta)
   (global-set-key [kp-delete] 'delete-char) ;; sets fn-delete to be right-delete
-  )
+)
 
 ;; ************************************************
 
@@ -82,6 +97,7 @@
           (lambda()
             (electric-indent-mode 1)))
 
+(load-library "/usr/local/share/emacs/site-lisp/flycheck/flycheck.elc")
 (require 'flycheck)
 (add-hook 'after-init-hook #'global-flycheck-mode)
 

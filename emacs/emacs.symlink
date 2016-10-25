@@ -42,6 +42,10 @@
 (load-library "/usr/local/share/emacs/site-lisp/markdown-mode/markdown-mode.elc")
 (load-library "/usr/local/share/emacs/site-lisp/php-mode/php-mode.elc")
 (load-library "/usr/local/share/emacs/site-lisp/web-mode/web-mode.elc")
+(load-library "/usr/local/share/emacs/site-lisp/nodejs-repl/nodejs-repl.elc")
+(load-library "/usr/local/share/emacs/site-lisp/tern/tern.elc")
+(autoload 'tern-mode "tern.el" nil t)
+(add-hook 'js2-mode-hook (lambda () (tern-mode t)))
 
 ;; Key Bindings
 (global-set-key "\C-s" 'save-buffer)

@@ -9,3 +9,7 @@ npm-debug.log
 .git-vcr.ini
 .sonar
 .sonar_lock
+.#*
+node_modules
+.tern-port
+yarn-error.log

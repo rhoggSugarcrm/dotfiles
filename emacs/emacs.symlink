@@ -27,6 +27,9 @@
  '(tool-bar-mode nil)
  '(vc-follow-symlinks t))
 
+(setq mac-command-modifier 'control)
+(setq mac-control-modifier 'control)
+
 (let ((default-directory "/usr/local/share/emacs/site-lisp/"))
     (normal-top-level-add-subdirs-to-load-path))
 (autoload 'tern-mode "tern.el" nil t)
@@ -49,13 +52,6 @@
 
 (global-set-key (kbd "<home>") 'beginning-of-line)
 (global-set-key (kbd "<end>") 'end-of-line) 
-
-;; key bindings
-(when (eq system-type 'darwin) ;; mac specific settings
-  (setq mac-option-modifier 'alt)
-  (setq mac-command-modifier 'meta)
-  (global-set-key [kp-delete] 'delete-char) ;; sets fn-delete to be right-delete
-)
 
 ;; ************************************************
 

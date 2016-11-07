@@ -1,5 +1,4 @@
-
-# Alias does dotfiles
+# rhoggSugarcrm does dotfiles
 
 ## dotfiles
 
@@ -19,7 +18,7 @@ structured the project accordingly.
 Run this:
 
 ```sh
-git clone https://github.com/alias-mac/dotfiles.git ~/.dotfiles
+git clone https://github.com/rhoggSugarcrm/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 script/bootstrap
 ```
@@ -74,7 +73,7 @@ work for you. That said, I do use this as *my* dotfiles, so there's a good
 chance I may break something if I forget to make a check for a dependency.
 
 If you're brand-new to the project and run into any blockers, please
-[open an issue](https://github.com/alias-mac/dotfiles/issues) on this
+[open an issue](https://github.com/rhoggSugarcrm/dotfiles/issues) on this
 repository and I'd love to get it fixed for you!
 
 ## Thanks

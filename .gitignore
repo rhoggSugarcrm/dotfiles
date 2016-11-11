@@ -1,2 +1,4 @@
 bin/git-jump
 bin/build*
+bin/license
+bin/prtext

@@ -41,6 +41,3 @@ if [[ -a ~/.localrc ]]
 then
   source ~/.localrc
 fi
-
-ulimit -n 65536
-ulimit -u 2048

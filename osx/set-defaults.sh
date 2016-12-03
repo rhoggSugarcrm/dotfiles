@@ -51,7 +51,7 @@ defaults write NSGlobalDomain KeyRepeat -int 5
 #defaults write NSGlobalDomain InitialKeyRepeat -int 20
 
 # Set language and text formats (System Preferences → Language & Text)
-defaults write NSGlobalDomain AppleLanguages -array "en_CA" "en";
+defaults write NSGlobalDomain AppleLanguages -array "en-CA" "en";
 defaults write NSGlobalDomain AppleLocale -string "en_US@currency=USD"
 defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
 defaults write NSGlobalDomain AppleMetricUnits -bool true

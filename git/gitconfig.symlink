@@ -21,6 +21,7 @@
     count = shortlog -sn
     unchange = checkout --
     uncommit = reset --hard HEAD~1
+    patch = --no-pager diff --no-color
 
 [color]
     diff = auto

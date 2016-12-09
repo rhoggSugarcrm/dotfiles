@@ -1,4 +1,3 @@
-
 # shortcut to dotfiles path is $DOT
 export DOT=$HOME/.dotfiles
 

@@ -83,10 +83,10 @@ alias "clearclear"="clear";
 alias "clear"="clear; ls; echo;";
 
 # Validate Apache files
-alias "validateApache"="httpd -t";
+alias "validate-apache"="httpd -t";
 
 # gjslint
-alias gjslint='/usr/local/bin/gjslint --flagfile=~/.gjslint-config --unix_mode --custom_jsdoc_tags=inheritdoc,alias,singleton';
+alias gjslint='/usr/local/bin/gjslint --unix_mode --custom_jsdoc_tags=inheritdoc,alias,singleton';
 
 # for colors
 export CLICOLOR=1

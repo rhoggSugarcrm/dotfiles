@@ -9,7 +9,7 @@
  '(column-number-mode t)
  '(cua-mode t nil (cua-base))
  '(delete-selection-mode t)
- '(flycheck-disabled-checkers (quote (emacs-lisp-checkdoc javascript-standard javascript-gjslint ruby-rubylint sh-posix-dash tex-lacheck)))
+ '(flycheck-disabled-checkers (quote (emacs-lisp-checkdoc javascript-standard javascript-gjslint javascript-jshint ruby-rubylint sh-posix-dash tex-lacheck)))
  '(fringe-mode (quote (nil . 0)) nil (fringe))
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
@@ -28,8 +28,8 @@
  '(vc-follow-symlinks t))
 
 ; only needed for aquamacs
-;(setq mac-command-modifier 'control)
-;(setq mac-control-modifier 'control)
+(setq mac-command-modifier 'control)
+(setq mac-control-modifier 'control)
 
 (let ((default-directory "/usr/local/share/emacs/site-lisp/"))
     (normal-top-level-add-subdirs-to-load-path))

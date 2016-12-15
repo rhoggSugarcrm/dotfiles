@@ -53,7 +53,7 @@
     default = simple
 
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\"
 	path = 
 
 [mergetool "sourcetree"]

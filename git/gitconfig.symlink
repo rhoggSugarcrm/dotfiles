@@ -12,7 +12,6 @@
     l = log --oneline --decorate --graph --show-signature
     la = log --oneline --decorate --graph --all --show-signature
     lf = log --summary --no-merges --show-signature
-    wtf = !$DOT/bin/git-wtf
     fixup = !sh -c 'git commit -m \"fixup! $(git log -1 --format='\\''%s'\\'' $@)\"' -
     squash = !sh -c 'git commit -m \"squash! $(git log -1 --format='\\''%s'\\'' $@)\"' -
     ri = rebase --interactive --autosquash

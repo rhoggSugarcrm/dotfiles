@@ -9,7 +9,7 @@
  '(column-number-mode t)
  '(cua-mode t nil (cua-base))
  '(delete-selection-mode t)
- '(flycheck-disabled-checkers (quote (emacs-lisp-checkdoc javascript-standard javascript-gjslint javascript-jshint ruby-rubylint sh-posix-dash tex-lacheck)))
+ '(flycheck-disabled-checkers (quote (emacs-lisp-checkdoc javascript-standard javascript-gjslint javascript-jscs javascript-jshint ruby-rubylint sh-posix-dash tex-lacheck)))
  '(fringe-mode (quote (nil . 0)) nil (fringe))
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
@@ -27,7 +27,6 @@
  '(tool-bar-mode nil)
  '(vc-follow-symlinks t))
 
-; only needed for aquamacs
 (setq mac-command-modifier 'control)
 (setq mac-control-modifier 'control)
 
@@ -194,6 +193,9 @@
 (add-to-list 'auto-mode-alist '("\.js$" . js2-mode))
 (add-to-list 'auto-mode-alist '("\.json$" . js2-mode))
 (add-to-list 'auto-mode-alist '("\.mention-bot$" . js2-mode))
+
+(require 'dockerfile-mode)
+(add-to-list 'auto-mode-alist '("Dockerfile" . dockerfile-mode))
 
 (custom-set-faces
   ;; custom-set-faces was added by Custom.

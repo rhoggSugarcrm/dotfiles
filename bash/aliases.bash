@@ -128,7 +128,6 @@ alias "rehash"="hash -r";
 
 # Emacs
 alias "emacs"="emacs -nw";
-alias "xemacs"="aquamacs";
 
 ###############################
 

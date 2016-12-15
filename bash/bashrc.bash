@@ -2,12 +2,10 @@
 # set up editors
 export ALTERNATE_EDITOR="nano";
 export EDITOR="emacs -nw";
-export VISUAL="aquamacs";
 export GIT_EDITOR="$EDITOR";
 
 # Set up Firefox for Karma
 export FIREFOX_BIN="/Applications/Firefox.app/Contents/MacOS/firefox-bin";
-#export BROWSER="$FIREFOX_BIN"; # incompatible with hub browse
 
 # your projects folder
 export PROJECTS=~/src

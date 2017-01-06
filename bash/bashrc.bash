@@ -1,3 +1,4 @@
+export PAGER=w3m
 
 # set up editors
 export ALTERNATE_EDITOR="nano";

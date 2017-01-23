@@ -33,6 +33,9 @@
 (let ((default-directory "/usr/local/share/emacs/site-lisp/"))
     (normal-top-level-add-subdirs-to-load-path))
 
+(require 'exec-path-from-shell)
+
+
 ;; Key Bindings
 (global-set-key "\C-s" 'save-buffer)
 (global-set-key "\C-q" 'save-buffers-kill-terminal)
@@ -177,23 +180,30 @@
           '(lambda ()
              (local-set-key "d" 'git-diff-file)))
 
-(require 'php-mode)
-  (add-to-list 'auto-mode-alist '("\.php$" . php-mode))
-
 ;; ************************************************
 
-(require 'markdown-mode)
-(add-to-list 'auto-mode-alist '("\.markdown$" . markdown-mode))
-(add-to-list 'auto-mode-alist '("\.mdown$" . markdown-mode))
-(add-to-list 'auto-mode-alist '("\.md$" . markdown-mode))
-
 (require 'editorconfig)
+(editorconfig-mode 1)
+
+;; ***********************************************
+
+;; Web
+
+(require 'php-mode)
+(add-to-list 'auto-mode-alist '("\.php$" . php-mode))
+
+(require 'web-mode)
 
 (require 'js2-mode)
 (add-to-list 'auto-mode-alist '("\.js$" . js2-mode))
 (add-to-list 'auto-mode-alist '("\.json$" . js2-mode))
 (add-to-list 'auto-mode-alist '("\.mention-bot$" . js2-mode))
+(add-to-list 'auto-mode-alist '("\.babelrc$" . js2-mode))
 
+;; ************************************************
+                                
+;; Docker
+                                
 (require 'dockerfile-mode)
 (add-to-list 'auto-mode-alist '("Dockerfile" . dockerfile-mode))
 

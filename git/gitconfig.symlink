@@ -18,7 +18,6 @@
     f = fetch --prune
     fa = fetch --all --prune --tags
     count = shortlog -sn
-    unchange = checkout --
     uncommit = reset --hard HEAD~1
     patch = --no-pager diff --no-color
 
@@ -52,7 +51,7 @@
     default = simple
 
 [difftool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\"
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 
 [mergetool "sourcetree"]

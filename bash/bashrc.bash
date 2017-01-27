@@ -1,9 +1,8 @@
-export PAGER=w3m
+export PAGER=less
 
 # set up editors
-export ALTERNATE_EDITOR="nano";
-export EDITOR="emacs -nw";
-export GIT_EDITOR="$EDITOR";
+export EDITOR="code";
+export GIT_EDITOR="$EDITOR --wait";
 
 # Set up Firefox for Karma
 export FIREFOX_BIN="/Applications/Firefox.app/Contents/MacOS/firefox-bin";
@@ -19,9 +18,6 @@ export HISTFILESIZE=100000
 # append to history, don't overwrite it
 shopt -s histappend
 
-# Save and reload the history after each command finishes
-#export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
-
 source $(brew --prefix php-version)/php-version.sh && php-version 5
 
 # load all functions
@@ -33,9 +29,7 @@ then
     done
 fi
 
-
-# use .localrc for SUPER SECRET CRAP that you don't
-# want in your public, versioned repo.
+# use .localrc for SECRETS
 if [[ -a ~/.localrc ]]
 then
   source ~/.localrc

@@ -1,15 +1,10 @@
 # reload bash stuff
 alias reload='. ~/.bash_profile'
 
-# make me a password
-alias genpasswd='echo `env LC_CTYPE=C tr -dc "a-zA-Z0-9-_\$\?" < /dev/urandom | head -c 10`'
-
 # switch to hub
 alias "git"="hub";
 
 # typos
-alias "subversion"="svn";
-alias "snv"="svn";
 alias "sl"="ls";
 
 # ignore binary files when grepping.
@@ -123,11 +118,6 @@ alias "gs"="git status -sb";
 
 # compatibility with zsh
 alias "rehash"="hash -r";
-
-################################
-
-# Emacs
-alias "emacs"="emacs -nw";
 
 ###############################
 

@@ -10,6 +10,7 @@ tap "homebrew/x11"
 tap "rwhogg/bob"
 
 brew "browser"
+brew “codemod”
 brew "coreutils"
 brew "curl"
 brew "dark-mode"

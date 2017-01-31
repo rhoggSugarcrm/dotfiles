@@ -2,7 +2,7 @@ export PAGER=less
 
 # set up editors
 export EDITOR="code";
-export GIT_EDITOR="$EDITOR --wait";
+export GIT_EDITOR="$EDITOR --wait --new-window";
 
 # Set up Firefox for Karma
 export FIREFOX_BIN="/Applications/Firefox.app/Contents/MacOS/firefox-bin";

@@ -38,10 +38,6 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.mouse MouseButtonMode -
 # Enable full keyboard access for all controls (System Preferences → Keyboard → Keyboard Shortcuts)
 # (e.g. enable Tab in modal dialogs)
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
-# Change "Move focus to next window" shortcut to ⌘§
-#/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:51:value:parameters:0 167" ~/Library/Preferences/com.apple.symbolichotkeys.plist 
-# and "Move focus to the widnow drawer" shorcut to ⌥⌘§
-#/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:51:value:parameters:1 10" ~/Library/Preferences/com.apple.symbolichotkeys.plist 
 
 # Disable press-and-hold for keys in favor of key repeat.
 defaults write -g ApplePressAndHoldEnabled -bool false
@@ -155,10 +151,6 @@ defaults write com.apple.iCal "Show Week Numbers" -bool true
 # birthdays off
 defaults write com.apple.iCal "display birthdays calendar" -bool false;
 
-# default calendar change (change this to your calendar id)
-defaults write com.apple.iCal "CalDefaultCalendarSelectedByUser" -bool true
-defaults write com.apple.iCal "CalDefaultCalendar" -string "5E11650F-1FBB-4725-84F7-7A5A5A485735"
-
 ##
 # Safari & WebKit
 ##
@@ -193,35 +185,14 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 # Terminal
 ##
 
-# Only use UTF-8 in Terminal.app
-defaults write com.apple.terminal StringEncodings -array 4
-
-# Use a modified version of the Pro theme by default in Terminal.app
-defaults write com.apple.Terminal "Default Window Settings" -string "Ocean"
-defaults write com.apple.Terminal "Startup Window Settings" -string "Ocean"
-
-##
-# GPG tools (Mail)
-##
-defaults write org.gpgtools.gpgmail DefaultSecurityMethod -int 2
 
 ##
 # Kill affected applications
 ##
 
-for app in "BetterTouchTool" "Dock" "Finder" "iCal" "Messages" \
-    "Safari" "SystemUIServer" "Transmission" "Twitter"; do
+for app in "Dock" "Finder"  \
+    "Safari" "SystemUIServer" ; do
     killall "$app" > /dev/null 2>&1
-done
-
-##
-# Open background affected applications
-##
-for app in "BetterTouchTool"; do
-    if [[ -a /Applications/"$app".app ]]
-    then
-        open /Applications/"$app".app
-	fi
 done
 
 echo "Done. Note that some of these changes require a logout/restart to take effect."

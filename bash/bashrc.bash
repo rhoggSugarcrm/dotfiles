@@ -1,14 +1,7 @@
-export PAGER=w3m
-
 # set up editors
-<<<<<<< HEAD
-export EDITOR="code";
-export GIT_EDITOR="$EDITOR --wait --new-window";
-=======
 export ALTERNATE_EDITOR="nano";
 export EDITOR="emacs -nw";
 export GIT_EDITOR="$EDITOR";
->>>>>>> parent of 43fb0d1... Switch to Visual Studio Code
 
 # Set up Firefox for Karma
 export FIREFOX_BIN="/Applications/Firefox.app/Contents/MacOS/firefox-bin";

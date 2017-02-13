@@ -35,19 +35,14 @@
 [apply]
     whitespace = nowarn
 
-[diff]
-    tool = tkdiff
-
-[merge]
-    tool = tkdiff
-
 [difftool]
     prompt = false
 
-[mergetool]
+[merge]
+    tool = emerge
+
+[difftool]
     prompt = false
-    keepBackup = false
-    tool = tkdiff
 
 [help]
     autocorrect = 1

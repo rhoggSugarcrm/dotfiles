@@ -14,3 +14,5 @@ node_modules
 .tern-port
 yarn-error.log
 .ignore
+*.map
+*.orig

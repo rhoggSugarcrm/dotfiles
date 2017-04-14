@@ -1,20 +1,10 @@
 #!/usr/bin/env bash
-#
-# Homebrew
-#
-# This installs the git default configuration. You are free to change it after
-# and keep it in sync if you want.
-#
 
 if ! [ -f git/gitconfig.symlink ]
 then
   inform 'setup gitconfig'
 
   git_credential='cache'
-  if [ "$(uname -s)" == "Darwin" ]
-  then
-    git_credential='osxkeychain'
-  fi
 
   user ' - What is your github author name?'
   read -e git_authorname < /dev/tty

@@ -9,8 +9,8 @@ import time
 
 # see com.intellij.idea.SocketLock for the server side of this interface
 
-RUN_PATH = u'/opt/homebrew-cask/Caskroom/phpstorm/9.0.2/PhpStorm.app'
-CONFIG_PATH = u'/Users/rhogg/Library/Preferences/WebIde90'
+RUN_PATH = u'/Applications/PhpStorm.app'
+#CONFIG_PATH = u'/Users/rhogg/Library/Preferences/WebIde90'
 
 args = []
 skip_next = False

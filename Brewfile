@@ -8,6 +8,7 @@ tap "rwhogg/bob"
 
 
 brew "browser"
+brew "cmark-gfm"
 brew "codemod"
 brew "coreutils"
 brew "curl"

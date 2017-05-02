@@ -124,11 +124,6 @@ alias "gs"="git status -sb";
 # compatibility with zsh
 alias "rehash"="hash -r";
 
-################################
-
-# Emacs
-alias "emacs"="emacs -nw";
-
 ###############################
 
 # Networks (OS X)

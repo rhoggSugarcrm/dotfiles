@@ -1,6 +1,0 @@
-#
-# Provide git autocomplete
-#
-
-__open_war_loadifexists "/usr/local/etc/bash_completion.d/git-completion.bash"
-__open_war_loadifexists "/usr/local/etc/bash_completion.d/hub.bash_completion.sh"

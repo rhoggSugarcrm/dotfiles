@@ -1,2 +1,1 @@
-# needed for yarn global packages
-export PATH="/usr/local/opt/node6-lts/bin:$PATH";
+source /usr/local/opt/nvm/nvm.sh

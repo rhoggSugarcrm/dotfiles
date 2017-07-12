@@ -1,7 +1,7 @@
 # set up editors
 export ALTERNATE_EDITOR=nano
-export EDITOR=code
-export GIT_EDITOR="$EDITOR -n -w";
+export EDITOR=light
+export GIT_EDITOR=$ALTERNATE_EDITOR;
 
 # Set up Firefox for Karma
 export FIREFOX_BIN="/Applications/Firefox.app/Contents/MacOS/firefox-bin";

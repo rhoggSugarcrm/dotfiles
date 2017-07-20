@@ -1,6 +1,5 @@
 # set up editors
-export ALTERNATE_EDITOR=nano
-export EDITOR=light
+export ALTERNATE_EDITOR=zile
 export GIT_EDITOR=$ALTERNATE_EDITOR;
 
 # Set up Firefox for Karma

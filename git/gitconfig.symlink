@@ -20,6 +20,7 @@
     count = shortlog -sn
     uncommit = reset --hard HEAD~1
     patch = --no-pager diff --no-color
+    wdiff = diff --word-diff
 
 [color]
     diff = auto

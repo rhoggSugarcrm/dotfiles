@@ -12,4 +12,4 @@ for comp_file in $(find $DOT -name *.completion -type f); do
 done
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
-PATH=/Users/rhogg/.Pokemon-Terminal:/Users/rhogg/privateBin:/Users/rhogg/.dotfiles/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin
+PATH=/usr/local/opt/python/libexec/bin:/Applications/MAMP/bin/php/php7.1.1/bin:/Users/rhogg/.Pokemon-Terminal:/Users/rhogg/privateBin:/Users/rhogg/.dotfiles/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin

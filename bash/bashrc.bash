@@ -1,5 +1,5 @@
 # set up editors
-export ALTERNATE_EDITOR=slap
+export ALTERNATE_EDITOR=micro
 export GIT_EDITOR=$ALTERNATE_EDITOR;
 
 # Set up Firefox for Karma

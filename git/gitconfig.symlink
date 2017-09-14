@@ -40,10 +40,10 @@
     prompt = false
 
 [diff]
-    tool = tkdiff
+    tool = meld
 
 [merge]
-	tool = tkdiff
+	tool = meld
 
 [difftool]
     prompt = false

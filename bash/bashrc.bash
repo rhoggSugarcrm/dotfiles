@@ -1,4 +1,5 @@
 # set up editors
+export EDITOR=code
 export ALTERNATE_EDITOR=micro
 export GIT_EDITOR=$ALTERNATE_EDITOR;
 

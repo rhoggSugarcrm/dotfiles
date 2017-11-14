@@ -20,3 +20,4 @@ karma
 .codemod.bookmark
 DEADJOE
 *.swp
+.stryker-tmp/

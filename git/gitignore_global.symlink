@@ -21,3 +21,8 @@ karma
 DEADJOE
 *.swp
 .stryker-tmp/
+*_BASE_*
+*_BACKUP_*
+*_LOCAL_*
+*_REMOTE_*
+.vscode

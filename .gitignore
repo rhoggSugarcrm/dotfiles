@@ -4,3 +4,4 @@ bin/license
 bin/prtext
 bin/copysidecar
 bin/readseedbed
+bin/runSeedbed

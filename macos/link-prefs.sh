@@ -7,7 +7,7 @@
 # preferences ~/Dropbox
 #
 
-PREFERENCES_ROOT="$DOT/osx/preferences"
+PREFERENCES_ROOT="$DOT/macos/preferences"
 
 function abspath() {
   pushd . > /dev/null;
@@ -123,7 +123,7 @@ export -f link_file
 
 inform 'installing preferences'
 
-find "$DOT/osx/preferences/" -type f | while read installer ; do bash -c "${installer}" ; done
+find "$DOT/macos/preferences/" -type f | while read installer ; do bash -c "${installer}" ; done
 
 echo ''
 echo '  Preferences installed!'

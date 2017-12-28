@@ -26,3 +26,4 @@ DEADJOE
 *_LOCAL_*
 *_REMOTE_*
 .vscode
+.gradle

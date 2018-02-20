@@ -49,6 +49,7 @@ cask "caffeine"
 cask "docker-toolbox"
 cask "firefox"
 cask "font-ubuntu"
+cask "forklift" # the only non-awful Mac file manager I've ever found
 cask "gimp"
 cask "github-desktop"
 cask "iterm2"

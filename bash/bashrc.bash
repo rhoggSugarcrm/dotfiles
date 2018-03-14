@@ -1,5 +1,5 @@
 # set up editors
-export EDITOR=code
+export EDITOR=atom
 export ALTERNATE_EDITOR=micro
 export GIT_EDITOR=$ALTERNATE_EDITOR;
 

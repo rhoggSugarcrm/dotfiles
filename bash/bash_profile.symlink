@@ -12,5 +12,5 @@ for comp_file in $(find $DOT -name *.completion -type f); do
 done
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
-PATH=/usr/local/opt/python/libexec/bin:/Applications/MAMP/bin/php/php7.1.8/bin:/Users/rhogg/.Pokemon-Terminal:/Users/rhogg/privateBin:/Users/rhogg/.dotfiles/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin
+PATH=/usr/local/opt/python/libexec/bin:/Applications/MAMP/bin/php/php7.1.12/bin:/Users/rhogg/.Pokemon-Terminal:/Users/rhogg/privateBin:/Users/rhogg/.dotfiles/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin
 export PATH="/usr/local/opt/python@2/bin:$PATH"

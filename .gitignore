@@ -5,3 +5,4 @@ bin/prtext
 bin/copysidecar
 bin/readseedbed
 bin/runSeedbed
+bin/minikube

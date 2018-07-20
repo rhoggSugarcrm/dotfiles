@@ -27,3 +27,6 @@ DEADJOE
 *_REMOTE_*
 .vscode
 .gradle
+package-lock.json
+yarn.lock
+PMSE.log

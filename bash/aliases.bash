@@ -8,8 +8,6 @@ alias genpasswd='echo `env LC_CTYPE=C tr -dc "a-zA-Z0-9-_\$\?" < /dev/urandom | 
 alias "git"="hub";
 
 # typos
-alias "subversion"="svn";
-alias "snv"="svn";
 alias "sl"="ls";
 
 # ignore binary files when grepping.
@@ -81,6 +79,8 @@ alias "cear"="clear";
 alias "clr"="clear";
 alias "clearclear"="clear";
 alias "clear"="clear; ls; echo;";
+
+alias "berw"="brew"
 
 # Validate Apache files
 alias "validate-apache"="httpd -t";

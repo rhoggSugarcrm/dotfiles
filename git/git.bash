@@ -24,6 +24,6 @@ then
   GIT_PS1_SHOWUNTRACKEDFILES=true
   GIT_PS1_SHOWUPSTREAM=true
   GIT_PS1_SHOWCOLORHINTS=true
-  PROMPT_COMMAND='__git_ps1 "wombat@work:\W \u" "$ci_status\\\$ "'
+  PROMPT_COMMAND='__git_ps1 "wombat@work:\W \u" "$ci_status % "'
   return
 fi

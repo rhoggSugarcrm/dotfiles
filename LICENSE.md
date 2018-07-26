@@ -1,4 +1,4 @@
-Copyright (C) Bob W. Hogg, 2015 - 2017. All Rights Reserved.
+Copyright (C) Bob W. Hogg, 2015 - 2018. All Rights Reserved.
 Copyright (c) Filipe Guerra
 http://open-war.com
 

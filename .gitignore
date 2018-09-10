@@ -6,3 +6,4 @@ bin/copysidecar
 bin/readseedbed
 bin/runSeedbed
 bin/minikube
+bin/minikube-backup

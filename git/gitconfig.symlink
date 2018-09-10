@@ -1,6 +1,6 @@
 [user]
-    name = Bob "Wombat" Hogg
-    email = rhogg@sugarcrm.com
+	name = Bob Wombat Hogg
+	email = rhogg@sugarcrm.com
 
 [credential]
     helper = cache
@@ -31,7 +31,7 @@
 [core]
     quotepath = false
     excludesfile = /Users/rhogg/.gitignore_global
-    pager = diff-so-fancy | less --tabs=4 -RFX
+    pager = /usr/local/bin/diff-so-fancy | less --tabs=4 -RFX
 
 [apply]
     whitespace = nowarn

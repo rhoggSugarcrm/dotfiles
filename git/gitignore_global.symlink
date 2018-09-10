@@ -30,3 +30,5 @@ DEADJOE
 package-lock.json
 yarn.lock
 PMSE.log
+*.komodoproject
+dist
